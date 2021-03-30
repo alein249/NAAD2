@@ -37,7 +37,7 @@ public class TotalWeight {
             if(str.charAt(i) == 'D')
                 count += weights[3];
             if(str.charAt(i) == 'E')
-                count += weights[4];
+               count += weights[4];
         }
         return count;
     }
