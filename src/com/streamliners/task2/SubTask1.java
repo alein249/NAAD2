@@ -1,17 +1,26 @@
 package com.streamliners.task2;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class SubTask1 {
+    public static List<Integer> getList(String s){
 
-    public static void main(String[] args) {
-        System.out.println(getList("1;2;3;4"));
+        // splitting the string at ";"
+        String[] str = s.split(";");
+        List<Integer> list = new ArrayList<>();
+        for(int i=0;i<str.length;i++){
+            list.add(Integer.parseInt(str[i]));
+        }
+        return list;
     }
-
-    private static List<Integer> getList(String s) {
-        //Write your code here!
-
-        return null;
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a string");
+        String result = sc.nextLine();
+        List<Integer> list = getList(result);
+        System.out.println("The resulting list is: " + list);
     }
 
 }
